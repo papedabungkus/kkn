@@ -123,12 +123,12 @@
             <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="mySigninModalLabel">Login <strong>Mahasiswa</strong></h4>
+                <h4 id="mySigninModalLabel">Login <strong>Dosen/Mahasiswa</strong></h4>
               </div>
               <div class="modal-body">
                 <form action="<?php echo site_url('home/signin');?>" method="POST" class="form-horizontal">
                   <div class="control-group">
-                    <label class="control-label" for="inputText">NIM</label>
+                    <label class="control-label" for="inputText">NIP/NIM</label>
                     <div class="controls">
                       <input name=nim type="text" id="inputText" placeholder="NIM">
                     </div>
@@ -143,9 +143,6 @@
                     <div class="controls">
                       <button type="submit" class="btn">Sign in</button>
                     </div>
-                    <p class="aligncenter margintop20">
-                      Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
-                    </p>
                   </div>
                 </form>
               </div>

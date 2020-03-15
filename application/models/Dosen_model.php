@@ -9,14 +9,17 @@ class Dosen_model extends CI_Model
     function __construct()
     {
         parent::__construct();
-    }
-    
+    } 
+
+    function cek_login($table,$where){		
+		return $this->db->get_where($table,$where);
+    } 
     /*
      * Get dosen by id_dosen
      */
-    function get_dosen($id_dosen)
+    function get_dosen($nip)
     {
-        return $this->db->get_where('dosen',array('id_dosen'=>$id_dosen))->row_array();
+        return $this->db->get_where('dosen',array('nip'=>$nip))->row_array();
     }
         
     /*

@@ -78,16 +78,17 @@ class Home extends CI_Controller{
     function signin()
     {
         $this->load->model('Mahasiswa_model');
+        $this->load->model('Dosen_model');
         $nim = $this->input->post('nim');
         $password = $this->input->post('password');
-        
-        $where = array(
-            'nim' => $nim,
-            'password' => md5($password),
-            );
-        $cek = $this->Mahasiswa_model->cek_login("mahasiswa",$where)->num_rows();
-        if($cek > 0)
+
+        if(strlen($nim)==9)
         {
+            $where = array(
+                'nim' => $nim,
+                'password' => md5($password),
+            );
+            $cek = $this->Mahasiswa_model->cek_login("mahasiswa",$where)->num_rows();
             $data_mhs = $this->Mahasiswa_model->get_mahasiswa($nim);
             $data_session = array(
                 'nim' => $nim,
@@ -95,10 +96,31 @@ class Home extends CI_Controller{
                 'status' => 'login',
                 'level' => 'mahasiswa',
                 'prodi' => $data_mhs['prodi'],
-                );
+            );
+            $akses = 'aksesmahasiswa';
 
+        } 
+        else 
+        {
+            $where = array(
+                'nip' => $nim,
+                'password' => md5($password),
+            );
+            $cek = $this->Dosen_model->cek_login("dosen",$where)->num_rows();
+            $data_dosen = $this->Dosen_model->get_dosen($nip);
+            $data_session = array(
+                'nip' => $nim,
+                'nama' => $data_dosen['nama_dosen'],
+                'status' => 'login',
+                'level' => 'dosen',
+            );
+            $akses = 'aksesdosen';
+
+        }
+        if($cek > 0)
+        {
             $this->session->set_userdata($data_session);   
-            redirect('aksesmahasiswa');
+            redirect($akses);
         }
         else
         {

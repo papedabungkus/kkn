@@ -70,7 +70,7 @@
           <?php } else { ?>
             <div class="headnav">
               <ul>
-                <li><i class="icon-user"></i> <?php echo $this->session->userdata('nim');?></li>
+                <li><i class="icon-user"></i> <?php echo $this->session->userdata('nip');?></li>
                 <li><a href="<?php echo site_url('home/signout');?>"><i class="icon-signout"></i> Sign Out</a></li>
               </ul>
             </div>
@@ -107,7 +107,7 @@
           <div class="span4">
             <div class="logo">
               <a href="<?php echo site_url('home');?>"><img src="<?php echo site_url('resources/frontend/img/header.png');?>" alt="" class="logo" /></a>
-            
+              
             </div>
           </div>
           <div class="span8">
@@ -116,10 +116,13 @@
                 <nav>
                   <ul class="nav topnav">
                     <li>
-                      <a href="<?php echo site_url('aksesmahasiswa');?>">Home </a>
+                      <a href="<?php echo site_url('aksesdosen');?>">Home </a>
                     </li>
                     <li class="dropdown">
-                      <a href="<?php echo site_url('aksesmahasiswa/laporan');?>">Laporan </a>
+                      <a href="<?php echo site_url('aksesdosen/bimbingan');?>">Bimbingan </a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="<?php echo site_url('aksesdosen/laporan');?>">Laporan </a>
                     </li>
                   </ul>
                 </nav>
