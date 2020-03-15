@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>kkn</title>
+        <title>Sistem Informasi Pengelolaan Data Laporan - Jurusan Teknik Informatika</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
@@ -27,9 +27,9 @@
                 <!-- Logo -->
                 <a href="" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">kkn</span>
+                    <span class="logo-mini">KKN</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">kkn</span>
+                    <span class="logo-lg">KKN</span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -93,44 +93,39 @@
                         <li class="header">MAIN NAVIGATION</li>
                         <li>
                             <a href="<?php echo site_url();?>">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                            </a>
-                        </li>
-						<li>
-                            <a href="<?php echo site_url('admin/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Admin</span>
+                                <i class="fa fa-laptop"></i> <span>Dashboard</span>
                             </a>
                         </li>
 						<li>
                             <a href="<?php echo site_url('dosen/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Dosen</span>
+                                <i class="fa fa-users"></i> <span>Dosen</span>
                             </a>
                         </li>
 						<li>
-                            <a href="<?php echo site_url('lap_kkn/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Lap KKN</span>
+                            <a href="#">
+                                <i class="fa fa-graduation-cap "></i> <span>Mahasiswa</span>
                             </a>
+                            <ul class="treeview-menu">
+								<li class="active">
+                                    <a href="#"><i class="fa fa-graduation-cap "></i> D3-Teknik Komputer</a>
+                                </li>
+								<li>
+                                    <a href="#"><i class="fa fa-graduation-cap "></i> S1-Teknik Informatika</a>
+                                </li>
+							</ul>
                         </li>
 						<li>
-                            <a href="<?php echo site_url('lap_kp/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Lap Kerja Praktek</span>
+                            <a href="#">
+                                <i class="fa fa-file-text"></i> <span>Laporan</span>
                             </a>
-                        </li>
-						<li>
-                            <a href="<?php echo site_url('lap_ta/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Lap Tugas Akhir</span>
-                            </a>
-                            
-                        </li>
-						<li>
-                            <a href="<?php echo site_url('lap_skripsi/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Lap Skripsi</span>
-                            </a>
-                        </li>
-						<li>
-                            <a href="<?php echo site_url('mahasiswa/index');?>">
-                                <i class="fa fa-desktop"></i> <span>Mahasiswa</span>
-                            </a>
+                            <ul class="treeview-menu">
+								<li class="active">
+                                    <a href="#"><i class="fa fa-file-word-o "></i> D3-Teknik Komputer</a>
+                                </li>
+								<li>
+                                    <a href="#"><i class="fa fa-file-word-o "></i> S1-Teknik Informatika</a>
+                                </li>
+							</ul>
                         </li>
                     </ul>
                 </section>
