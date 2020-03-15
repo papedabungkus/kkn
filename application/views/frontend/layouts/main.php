@@ -182,8 +182,8 @@
         <div class="row">
           <div class="span4">
             <div class="logo">
-              <a href="<?php echo site_url('home');?>"><img src="<?php echo site_url('resources/frontend/img/logo.png');?>" alt="" class="logo" /></a>
-              <h1>Teknik Informatika</h1>
+              <a href="<?php echo site_url('home');?>"><img src="<?php echo site_url('resources/frontend/img/header.png');?>" alt="" class="logo" /></a>
+              
             </div>
           </div>
           <div class="span8">
