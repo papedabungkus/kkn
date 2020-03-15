@@ -9,7 +9,6 @@ class Aksesmahasiswa extends CI_Controller{
 		}
         $this->load->model('Lap_skripsi_model');
         $this->load->model('Lap_ta_model');
-        $this->load->model('Lap_kkn_model');
         $this->load->model('Lap_kp_model');
         $this->load->model('Dosen_model');
     }

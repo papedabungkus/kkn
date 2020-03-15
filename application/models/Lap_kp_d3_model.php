@@ -4,7 +4,7 @@
  * www.crudigniter.com
  */
  
-class Lap_kp_model extends CI_Model
+class Lap_kp_d3_model extends CI_Model
 {
     function __construct()
     {
@@ -14,7 +14,7 @@ class Lap_kp_model extends CI_Model
     /*
      * Get lap_kp by id_laporan
      */
-    function get_lap_kp($id_laporan)
+    function get_lap_kp_d3($id_laporan)
     {
         return $this->db->get_where('lap_kp',array('id_laporan'=>$id_laporan))->row_array();
     }
@@ -27,10 +27,10 @@ class Lap_kp_model extends CI_Model
     /*
      * Get all lap_kp
      */
-    function get_all_lap_kp()
+    function get_all_lap_kp_d3()
     {
         $this->db->order_by('id_laporan', 'desc');
-        return $this->db->get('lap_kp')->result_array();
+        return $this->db->get('lap_kp_d3')->result_array();
     }
         
     /*

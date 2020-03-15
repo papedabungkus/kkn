@@ -37,8 +37,11 @@ class Lap_skripsi_model extends CI_Model
      */
     function get_all_lap_skripsi()
     {
+        $this->db->select('*');
+        $this->db->from('lap_skripsi');
+        $this->db->join('mahasiswa', 'mahasiswa.nim = lap_skripsi.nim');
         $this->db->order_by('id_laporan', 'desc');
-        return $this->db->get('lap_skripsi')->result_array();
+        return $this->db->get()->result_array();
     }
         
     /*

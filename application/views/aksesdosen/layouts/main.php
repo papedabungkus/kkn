@@ -115,10 +115,11 @@
                       <a href="<?php echo site_url('aksesdosen');?>">Home </a>
                     </li>
                     <li class="dropdown">
-                      <a href="<?php echo site_url('aksesdosen/bimbingan');?>">Bimbingan </a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="<?php echo site_url('aksesdosen/laporan');?>">Laporan </a>
+                      <a href="#">Bimbingan Laporan <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="<?php echo site_url('aksesdosen/bimbingand3');?>">D3-Teknik Komputer</a></li>
+                        <li><a href="<?php echo site_url('aksesdosen/bimbingans1');?>">S1-Teknik Informatika</a></li>
+                      </ul>
                     </li>
                   </ul>
                 </nav>
