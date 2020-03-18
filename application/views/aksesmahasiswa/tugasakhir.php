@@ -19,19 +19,25 @@
           </div>
           <div class="span4">
            
-            <div class="comment-area">
-              <h4>4 Comments</h4>
+          <div class="comment-area">
+              <?php if ($komentar->num_rows() > 0)
+              {
+                echo "<h4>".$komentar->num_rows()." Komentar</h4>";
+              }
+              ?>
+              <?php foreach ($komentar->result_array() as $c) { ?>
               <div class="media">
                 <a href="#" class="thumbnail pull-left"><img src="<?php echo site_url('resources/frontend/img/avatar.png');?>" alt="" /></a>
                 <div class="media-body">
                   <div class="media-content">
-                    <h6><span>March 12, 2013</span> Karen medisson</h6>
+                    <h6><span><?php echo $c['tglwaktu'];?></span> <?php echo $c['nama_dosen'];?></h6>
                     <p>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    <?php echo $c['komentar'];?>
                     </p>
                   </div>
                 </div>
-              </div>          
+              </div>  
+              <?php } ?>        
             </div>
           </div>
         </div>

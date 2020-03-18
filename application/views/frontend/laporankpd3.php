@@ -21,7 +21,7 @@
         <!-- Default table -->
         <div class="row">        
             <div class="span12">
-            <h4>Laporan Kerja Praktek</h4>
+            <h4>Laporan Kerja Praktek D3 Teknik Komputer</h4>
             <table class="table table-striped">
                     <tr>
 						<th>No.</th>
@@ -30,11 +30,10 @@
 						<th>Tgl Upload</th>
 						<th>Dospem 1</th>
 						<th>Dospem 2</th>
-						<th>Kategori Laporan</th>
                     </tr>
                     <?php 
                     $no=1;
-                    foreach($lap_kerjapraktek as $l){ ?>
+                    foreach($laporan as $l){ ?>
                     <tr>
 						<td><?php echo $no++; ?></td>
 						<td><?php echo $l['nim']; ?></td>
@@ -42,7 +41,6 @@
 						<td><?php echo $l['tgl_upload']; ?></td>
 						<td><?php echo $l['dospem_1']; ?></td>
 						<td><?php echo $l['dospem_2']; ?></td>
-						<td><?php echo $l['kategori_laporan']; ?></td>
 						
                     </tr>
                     <?php } ?>

@@ -28,7 +28,7 @@
                   <div class="text">
                     <h6>Laporan Kerja Praktek</h6>
                     <p>
-                    <?php echo $lap_kerjapraktek['judul_laporan'];?>
+                    <?php echo $lap_kp['judul_laporan'];?>
                     </p>
                     <a href="<?php echo site_url('aksesmahasiswa/kerjapraktek');?>">Selengkapnya</a>
                   </div>

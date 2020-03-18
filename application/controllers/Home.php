@@ -33,22 +33,24 @@ class Home extends CI_Controller{
         
         $this->load->view('frontend/layouts/main',$data);
     }
-    function laporankkn()
+
+    function laporankps1()
     {
-        $this->load->model('Lap_kkn_model');
+        $this->load->model('Lap_kp_s1_model');
         $data = array(
-            'lap_kkn' => $this->Lap_kkn_model->get_all_lap_kkn(),
-            '_view' => 'frontend/laporankkn',
+            'laporan' => $this->Lap_kp_s1_model->get_all_lap_kp_s1(),
+            '_view' => 'frontend/laporankps1',
         );
         
         $this->load->view('frontend/layouts/main',$data);
     }
-    function laporankerjapraktek()
+
+    function laporankpd3()
     {
-        $this->load->model('Lap_kp_model');
+        $this->load->model('Lap_kp_d3_model');
         $data = array(
-            'lap_kerjapraktek' => $this->Lap_kp_model->get_all_lap_kp(),
-            '_view' => 'frontend/laporankp',
+            'laporan' => $this->Lap_kp_d3_model->get_all_lap_kp_d3(),
+            '_view' => 'frontend/laporankpd3',
         );
         
         $this->load->view('frontend/layouts/main',$data);

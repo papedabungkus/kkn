@@ -19,18 +19,21 @@ class Lap_kp_d3_model extends CI_Model
         return $this->db->get_where('lap_kp',array('id_laporan'=>$id_laporan))->row_array();
     }
 
-    function get_lap_kp_by_nim($nim)
+    function get_lap_kp_d3_by_nim($nim)
     {
-        return $this->db->get_where('lap_kp',array('nim'=>$nim))->row_array();
-    }
+        return $this->db->get_where('lap_kp_d3',array('nim'=>$nim))->row_array();
+    } 
         
     /*
      * Get all lap_kp
      */
     function get_all_lap_kp_d3()
     {
+        $this->db->select('*');
+        $this->db->from('lap_kp_d3');
+        $this->db->join('mahasiswa', 'mahasiswa.nim = lap_kp_d3.nim');
         $this->db->order_by('id_laporan', 'desc');
-        return $this->db->get('lap_kp_d3')->result_array();
+        return $this->db->get()->result_array();
     }
         
     /*

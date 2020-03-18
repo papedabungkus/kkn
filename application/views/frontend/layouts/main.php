@@ -190,10 +190,10 @@
                     <li class="dropdown">
                       <a href="#">Laporan <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a href="<?php echo site_url('home/laporankerjapraktek');?>">Kerja Praktek</a></li>
-                        <li><a href="<?php echo site_url('home/laporankkn');?>">KKN</a></li>
-                        <li><a href="<?php echo site_url('home/laporantugasakhir');?>">Tugas Akhir</a></li>
-                        <li><a href="<?php echo site_url('home/laporanskripsi');?>">Skripsi</a></li>
+                        <li><a href="<?php echo site_url('home/laporankpd3');?>">Kerja Praktek (D3)</a></li>
+                        <li><a href="<?php echo site_url('home/laporantugasakhir');?>">Tugas Akhir (D3)</a></li>
+                        <li><a href="<?php echo site_url('home/laporankps1');?>">Kerja Praktek (S1)</a></li>
+                        <li><a href="<?php echo site_url('home/laporanskripsi');?>">Skripsi (S1)</a></li>
                       </ul>
                     </li>
                     <li>

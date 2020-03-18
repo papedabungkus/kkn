@@ -29,8 +29,12 @@ class Lap_ta_model extends CI_Model
      */
     function get_all_lap_ta()
     {
+        $this->db->select('*');
+        $this->db->from('lap_ta');
+        $this->db->join('mahasiswa', 'mahasiswa.nim = lap_ta.nim');
         $this->db->order_by('id_laporan', 'desc');
-        return $this->db->get('lap_ta')->result_array();
+        return $this->db->get()->result_array();
+
     }
         
     /*

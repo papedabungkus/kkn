@@ -10,7 +10,7 @@
             <ul class="breadcrumb">
               <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
               <li><a href="#">Laporan</a><i class="icon-angle-right"></i></li>
-              <li class="active">Tugas Akhir</li>
+              <li class="active">Kerja Praktek</li>
             </ul>
           </div>
         </div>
@@ -21,7 +21,7 @@
         <!-- Default table -->
         <div class="row">        
             <div class="span12">
-            <h4>Laporan Tugas Akhir</h4>
+            <h4>Laporan Kerja Praktek S1 Teknik Informatika</h4>
             <table class="table table-striped">
                     <tr>
 						<th>No.</th>
@@ -33,7 +33,7 @@
                     </tr>
                     <?php 
                     $no=1;
-                    foreach($lap_tugasakhir as $l){ ?>
+                    foreach($laporan as $l){ ?>
                     <tr>
 						<td><?php echo $no++; ?></td>
 						<td><?php echo $l['nim']; ?></td>

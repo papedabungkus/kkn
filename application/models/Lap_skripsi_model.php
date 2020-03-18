@@ -18,7 +18,7 @@ class Lap_skripsi_model extends CI_Model
     {
         return $this->db->get_where('lap_skripsi',array('id_laporan'=>$id_laporan))->row_array();
     }
-
+ 
     function get_lap_skripsi_by_nim($nim)
     {
         return $this->db->get_where('lap_skripsi',array('nim'=>$nim))->row_array();

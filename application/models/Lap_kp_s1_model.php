@@ -19,9 +19,9 @@ class Lap_kp_s1_model extends CI_Model
         return $this->db->get_where('lap_kp',array('id_laporan'=>$id_laporan))->row_array();
     }
 
-    function get_lap_kp_by_nim($nim)
+    function get_lap_kp_s1_by_nim($nim)
     {
-        return $this->db->get_where('lap_kp',array('nim'=>$nim))->row_array();
+        return $this->db->get_where('lap_kp_s1',array('nim'=>$nim))->row_array();
     }
         
     /*

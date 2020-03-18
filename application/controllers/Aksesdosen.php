@@ -22,8 +22,26 @@ class Aksesdosen extends CI_Controller{
 
     function bimbingand3()
     {
-        $data['_view'] = 'aksesdosen/bimbingand3';
+        $jenislaporan = $this->input->post('jenislaporan');
+        if($jenislaporan=="kp")
+        {
+            $laporan = $this->Lap_kp_d3_model->get_all_lap_kp_d3();
+        }
+        elseif($jenislaporan=="ta")
+        {
+            $laporan = $this->Lap_ta_model->get_all_lap_ta();
+        }
+        else
+        {
+            $laporan = "";
+        }
+        $data = array(
+            'jenislaporan' => $jenislaporan,
+            'laporan' => $laporan,
+            '_view' => 'aksesdosen/bimbingand3',
+        );
         $this->load->view('aksesdosen/layouts/main',$data);
+
     }
 
     function bimbingans1()

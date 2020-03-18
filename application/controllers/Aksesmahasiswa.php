@@ -9,7 +9,8 @@ class Aksesmahasiswa extends CI_Controller{
 		}
         $this->load->model('Lap_skripsi_model');
         $this->load->model('Lap_ta_model');
-        $this->load->model('Lap_kp_model');
+        $this->load->model('Lap_kp_s1_model');
+        $this->load->model('Lap_kp_d3_model');
         $this->load->model('Dosen_model');
     }
 
@@ -22,11 +23,19 @@ class Aksesmahasiswa extends CI_Controller{
     function laporan()
     {
         $nim = $this->session->userdata('nim');
+        $prodi = $this->session->userdata('prodi');
+        if($prodi=="D3 Teknik Komputer")
+        {
+            $lap_kp = $this->Lap_kp_d3_model->get_lap_kp_d3_by_nim($nim);
+        }
+        elseif($prodi=="S1 Teknik Informatika")
+        {
+            $lap_kp = $this->Lap_kp_s1_model->get_lap_kp_s1_by_nim($nim);
+        }
         $data = array(
             'lap_skripsi' => $this->Lap_skripsi_model->get_lap_skripsi_by_nim($nim),
             'lap_tugasakhir' => $this->Lap_ta_model->get_lap_ta_by_nim($nim),
-            'lap_kkn' => $this->Lap_kkn_model->get_lap_kkn_by_nim($nim),
-            'lap_kerjapraktek' => $this->Lap_kp_model->get_lap_kp_by_nim($nim),
+            'lap_kp' => $this->Lap_kp_s1_model->get_lap_kp_s1_by_nim($nim),
             '_view' => 'aksesmahasiswa/laporan',
         );
         $this->load->view('aksesmahasiswa/layouts/main',$data);
@@ -124,22 +133,11 @@ class Aksesmahasiswa extends CI_Controller{
 
     }
 
-    function kkn()
-    {
-        $nim = $this->session->userdata('nim');
-        $data = array(
-            'lap_kkn' => $this->Lap_kkn_model->get_lap_kkn_by_nim($nim),
-            '_view' => 'aksesmahasiswa/kkn',
-        );
-        
-        $this->load->view('aksesmahasiswa/layouts/main',$data);
-
-    }
-
     function tugasakhir()
     {
         $nim = $this->session->userdata('nim');
         $data = array(
+            'komentar' => $this->Lap_skripsi_model->get_comments($nim),
             'lap_tugasakhir' => $this->Lap_ta_model->get_lap_ta_by_nim($nim),
             '_view' => 'aksesmahasiswa/tugasakhir',
         );
@@ -151,8 +149,17 @@ class Aksesmahasiswa extends CI_Controller{
     function kerjapraktek()
     {
         $nim = $this->session->userdata('nim');
+        $prodi = $this->session->userdata('prodi');
+        if($prodi=="D3 Teknik Komputer")
+        {
+            $lap_kp = $this->Lap_kp_d3_model->get_lap_kp_d3_by_nim($nim);
+        }
+        elseif($prodi=="S1 Teknik Informatika")
+        {
+            $lap_kp = $this->Lap_kp_s1_model->get_lap_kp_s1_by_nim($nim);
+        }
         $data = array(
-            'lap_kerjapraktek' => $this->Lap_kp_model->get_lap_kp_by_nim($nim),
+            'laporan' => $lap_kp,
             '_view' => 'aksesmahasiswa/kerjapraktek',
         );
         

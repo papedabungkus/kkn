@@ -3,14 +3,14 @@
         <div class="row">
           <div class="span8">
             <div class="inner-heading">
-              <h2>Pembimbingan Laporan S1 Teknik Informatika </h2>
+              <h2>Pembimbingan Laporan D3 Teknik Komputer </h2>
             </div>
           </div>
           <div class="span4">
             <ul class="breadcrumb">
               <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
               <li><a href="#">Bimbingan Laporan</a><i class="icon-angle-right"></i></li>
-              <li class="active">S1 Teknik Informatika</li>
+              <li class="active">D3 Teknik Komputer</li>
             </ul>
           </div>
         </div>
@@ -21,12 +21,12 @@
         <!-- Default table -->
         <div class="row">        
             <div class="span12">
-            <form action="<?php echo site_url('aksesdosen/bimbingans1');?>" method="POST">
+            <form action="<?php echo site_url('aksesdosen/bimbingand3');?>" method="POST">
             <div class="btn-group">
                 <select name="jenislaporan" class="btn">
                     <option>-- Pilih Jenis Laporan --</option>
                     <option value="kp" <?php if($jenislaporan=="kp") { echo 'selected="selected"'; } ?>>Kerja Praktek</option>
-                    <option value="skripsi" <?php if($jenislaporan=="skripsi") { echo 'selected="selected"'; } ?>>Skripsi</option>
+                    <option value="ta" <?php if($jenislaporan=="ta") { echo 'selected="selected"'; } ?>>Tugas Akhir</option>
                 </select>
                 <input type="submit" class="btn btn-primary" value="Tampilkan">
             </div>
